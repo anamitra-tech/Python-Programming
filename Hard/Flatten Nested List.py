@@ -23,3 +23,4 @@ def flatten_global(nested):
         else:
             result.append(item)
 
+#extend is needed because flatten(item) returns a list, and you want its elements, not the list itself.
