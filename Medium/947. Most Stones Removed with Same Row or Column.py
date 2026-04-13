@@ -25,6 +25,32 @@ class Solution:
         # connect row and column
         for r, c in stones:
             union(r, ~c)
+            🔥 Why we use ~c (i.e., -c - 1)
+Problem:
+
+Rows and columns are both numbers.
+
+Example:
+
+row = 2
+col = 2
+
+If you do:
+
+union(2, 2)
+
+👉 You’re saying:
+
+row 2 == column 2
+
+🚨 WRONG — they are different things.
+
+✅ Solution: Separate their identities
+
+We need:
+
+rows → one space
+columns → another space
 
         # count unique components
         roots = set()
